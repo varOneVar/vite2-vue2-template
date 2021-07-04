@@ -1,0 +1,72 @@
+{
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "vite",
+    "qa": "vite build --mode qa",
+    "build": "vite build",
+    "serve": "vite preview",
+    "eslint": "./node_modules/.bin/eslint --fix ./src/**.js ./src/**.vue",
+    "prepare": "husky install",
+    "version": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0 && git add CHANGELOG.md",
+    "cz": "./node_modules/.bin/cz-customizable",
+    "git-push": "winpty sh git.sh",
+    "vs-push": "sh git.sh"
+  },
+  "devDependencies": {
+    "@amatlash/vite-plugin-stylelint": "^1.1.1",
+    "@babel/cli": "^7.14.5",
+    "@babel/core": "^7.14.6",
+    "@babel/eslint-parser": "^7.14.7",
+    "@babel/eslint-plugin": "^7.14.5",
+    "@babel/preset-env": "^7.14.7",
+    "@commitlint/cli": "^12.1.4",
+    "@commitlint/config-conventional": "^12.1.4",
+    "@vitejs/plugin-legacy": "^1.4.3",
+    "commitlint": "^12.1.4",
+    "conventional-changelog-cli": "^2.1.1",
+    "cz-customizable": "^6.3.0",
+    "eslint": "^7.30.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-html": "^6.1.2",
+    "eslint-plugin-import": "^2.23.4",
+    "eslint-plugin-prettier-vue": "3.1.0",
+    "eslint-plugin-vue": "^7.12.1",
+    "husky": "^7.0.0",
+    "lint-staged": "^11.0.0",
+    "mdast-util-from-markdown": "^1.0.0",
+    "mockjs": "^1.1.0",
+    "postcss": "^8.3.5",
+    "postcss-cli": "^8.3.1",
+    "postcss-preset-env": "^6.7.0",
+    "prettier": "^2.3.2",
+    "sass": "^1.35.1",
+    "sass-loader": "^12.1.0",
+    "stylelint": "^13.13.1",
+    "stylelint-config-prettier": "^8.0.2",
+    "stylelint-config-recess-order": "^2.4.0",
+    "stylelint-config-standard": "^22.0.0",
+    "stylelint-prettier": "^1.2.0",
+    "stylelint-scss": "^3.19.0",
+    "vite": "^2.3.8",
+    "vite-plugin-mock": "^2.8.0",
+    "vite-plugin-vue2": "^1.7.2",
+    "vue-template-compiler": "^2.6.14"
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "core-js": "^3.15.2",
+    "vue": "^2.6.14",
+    "vue-router": "^3.5.2",
+    "vuex": "^3.6.2"
+  },
+  "lint-staged": {
+    "./src/*.{vue,js,ts}": [
+      "vue-cli-service lint",
+      "eslint --fix"
+    ],
+    "./src/*.{css,less,scss,styl,html,htm,vue}": [
+      "stylelint --fix"
+    ]
+  }
+}

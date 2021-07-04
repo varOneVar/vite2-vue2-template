@@ -1,0 +1,8 @@
+{
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true,
+    "source.fixAll.stylelint": true
+  },
+  "vetur.validation.template": false,    // 把 vetur 扩展的 template 格式化去掉
+  "editor.formatOnSave": false,
+}

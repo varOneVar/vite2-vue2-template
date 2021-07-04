@@ -1,0 +1,10 @@
+# 执行 npx browserslist 可以查看配置支持的浏览器
+# https://juejin.cn/post/6844903669524086797
+> 5%
+last 4 safari versions
+last 4 Firefox versions
+iOS > 10
+chrome > 78
+Android >= 4.4
+ie 11
+not dead
