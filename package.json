@@ -62,7 +62,6 @@
   },
   "lint-staged": {
     "./src/*.{vue,js,ts}": [
-      "vue-cli-service lint",
       "eslint --fix"
     ],
     "./src/*.{css,less,scss,styl,html,htm,vue}": [
