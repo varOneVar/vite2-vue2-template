@@ -1,0 +1,50 @@
+/* eslint-disable */
+
+/* theme color */
+$--color-primary: #0071ce;
+$--color-success: #2a8703;
+$--color-warning: #ec8131;
+$--color-danger: #ff4949;
+$--color-info: #cecece;
+
+$--color-text-primary: #282828;
+$--color-text-regular: #5d5d5d;
+$--color-text-secondary: #9a9a9a;
+$--color-text-placeholder: #cecece;
+
+$--border-color-base: #cecece;
+$--border-color-lighter: #ececec;
+$--border-color-lighter: #f3f3f3;
+$--border-color-extra-light: #f8f8f8;
+
+$--color-white: #fff;
+$--color-black: #282828;
+$--background-color-base: #f5f7fa;
+
+$--table-border: 1px solid #cecece;
+$--button-font-weight: 400;
+
+// sidebar
+$menuText: #bfcbd9;
+$menuActiveText: #0071ce;
+$subMenuActiveText: #f4f4f5; // https://github.com/ElemeFE/element/issues/12951
+
+$menuBg: #304156;
+$menuHover: #263445;
+
+$subMenuBg: #1f2d3d;
+$subMenuHover: #001528;
+$sideBarWidth: 210px;
+$navBarHeight: 50px; // 4px的阴影距离
+$tagsViewHeight: 34px;
+
+:export {
+  menutext: $menuText;
+  menuactivetext: $menuActiveText;
+  submenuactivetext: $subMenuActiveText;
+  menubg: $menuBg;
+  menuhover: $menuHover;
+  submenubg: $subMenuBg;
+  submenuhover: $subMenuHover;
+  sidebarwidth: $sideBarWidth;
+}

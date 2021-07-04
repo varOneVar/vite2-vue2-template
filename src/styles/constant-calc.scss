@@ -1,0 +1,109 @@
+// @import './element-variables.scss';
+// https://www.sassmeister.com/ 不清楚的在这个在线网站上可以看到转换后的样式
+
+// 循环出7个尺寸百分比布局 例：grid-col-4
+@for $i from 1 through 7 {
+  $calc: 1 / $i * 100%;
+  .grid-col-#{$i} {
+    -ms-flex: 0 0 #{$calc};
+    flex: 0 0 #{$calc};
+    max-width: #{$calc};
+  }
+}
+
+// 循环出margin和padding的常用值, 例：plr-15, mlr-15
+$enum: 10, 15, 20, 30;
+$types: (
+  m: margin,
+  p: padding
+);
+$position: (
+  t: top,
+  b: bottom,
+  lr: (
+    left,
+    right
+  ),
+  tb: (
+    top,
+    bottom
+  )
+);
+
+@each $i in $enum {
+  @each $key, $value in $position {
+    @each $ti, $tv in $types {
+      .#{$ti}#{$key}-#{$i} {
+        @each $k in $value {
+          #{$tv}-#{$k}: #{$i}px;
+        }
+      }
+    }
+  }
+}
+
+// 循环出常用字体12-28偶数字号，例：f12,f14
+@for $i from 0 through 8 {
+  $fontSize: 12 + $i * 2;
+  .f#{$fontSize} {
+    font-size: #{$fontSize}px;
+  }
+}
+
+// display类型
+$display: block, inline-block, inline;
+
+@each $key in $display {
+  .#{$key} {
+    display: $key;
+  }
+}
+
+// cursor常用类型，例：cursor-pointer
+$cursor: (
+  pointer: pointer,
+  disabled: not-allowed
+);
+
+@each $key, $value in $cursor {
+  .cursor-#{$key} {
+    cursor: $value;
+  }
+}
+
+// weight常用类型
+$weight: (
+  bold: bold,
+  thin: 500
+);
+
+@each $key, $value in $weight {
+  .#{$key} {
+    font-weight: $value;
+  }
+}
+
+// text-align 类型
+$textAlign: left, right, center;
+
+@each $key in $textAlign {
+  .text-#{$key} {
+    text-align: $key;
+  }
+}
+
+// 颜色，例：c-red, bg-red
+$colorType: (
+  red: $--color-danger,
+  blue: $--color-primary,
+  gray: $--color-info
+);
+
+@each $key, $value in $colorType {
+  .c-#{'' + $key} {
+    color: $value;
+  }
+  .bc-#{'' + $key} {
+    background-color: $value;
+  }
+}

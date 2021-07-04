@@ -24,7 +24,7 @@ export default ({ mode }) => {
     css: {
       preprocessorOptions: {
         scss: {
-          additionalData: `@import "@/styles/variables.scss";`
+          additionalData: `@import "@/styles/element-variables.scss";`
         }
       }
     },

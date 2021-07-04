@@ -1,0 +1,30 @@
+@mixin scrollBar {
+  &::-webkit-scrollbar-track {
+    background: rgb(239, 239, 239);
+    border-radius: 2px;
+  }
+
+  &::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  &::-webkit-scrollbar-corner {
+    background: rgba(144, 147, 153, 0.3);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: rgba(144, 147, 153, 0.3);
+    border-radius: 10px;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background: rgba(144, 147, 153, 0.5);
+    }
+  }
+}
+
+@mixin utils-pierce {
+  ::v-deep {
+    @content;
+  }
+}

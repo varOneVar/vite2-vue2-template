@@ -1,0 +1,108 @@
+.flex {
+  display: flex;
+  min-width: 0; /* 子元素做文字截断省略号时生效 */
+  min-height: 0;
+}
+
+.flex1 {
+  flex: 1;
+  min-width: 0;
+  min-height: 0;
+}
+
+.flex-column {
+  @extend .flex;
+
+  flex-direction: column;
+}
+
+.flex-baseline {
+  @extend .flex;
+
+  align-items: baseline;
+}
+
+.flex-align-center {
+  @extend .flex;
+
+  align-items: center;
+}
+
+.flex-wrap {
+  @extend .flex;
+
+  flex-wrap: wrap;
+}
+
+.flex-sb {
+  @extend .flex;
+
+  justify-content: space-between;
+}
+
+.flex-sb-c {
+  @extend .flex-align-center;
+
+  justify-content: space-between;
+}
+
+.flex-sb-baseline {
+  @extend .flex-baseline;
+
+  justify-content: space-between;
+}
+
+.flex-sa {
+  @extend .flex;
+
+  justify-content: space-around;
+}
+
+.flex-sa-c {
+  @extend .flex-align-center;
+
+  justify-content: space-around;
+}
+
+.flex-center {
+  @extend .flex-align-center;
+
+  justify-content: center;
+}
+
+.nowrap {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-wrap: normal;
+  white-space: nowrap;
+}
+
+/* ie与火狐不支持 https://caniuse.com/#search=-webkit-line-clamp */
+.multiple-nowrap {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+}
+
+.label {
+  /* flex布局防止label文字换行 */
+  word-break: keep-all;
+  white-space: nowrap;
+}
+
+.unclick {
+  pointer-events: none;
+}
+
+.unselect {
+  user-select: none;
+}
+
+.small {
+  font-size: 80%;
+}
+
+.super {
+  font-size: 120%;
+}
